@@ -1,3 +1,5 @@
+package shapes;
+
 import java.util.Scanner;
 public class ShapeMain {
       public static void main(String[] args) {
