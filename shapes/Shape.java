@@ -1,32 +1,32 @@
-public abstract class Shape {
+package shapes;
 
-    private String  color;
+public abstract class Shape{
+    private String color;
     private boolean filled;
 
-    public Shape(String color, boolean filled) {
-        this.color  = color;
+    public Shape(String color, boolean filled){
+        this.color = color;
         this.filled = filled;
     }
 
     public abstract double getArea();
     public abstract double getPerimeter();
 
-    @Override
-    public String toString() {
-        return "Color : " + color + "\n" +
-                "Filled: " + (filled ? "Yes" : "No");
+    @Override 
+    public String toString(){
+        return "Color : " + color + "\n" + "Filled: " + (filled? "Yes" : "No");
     }
 
-    public String  getColor()           {
+    public String getColor(){
         return color;
     }
-    public boolean isFilled()           {
+    public boolean isFilled(){
         return filled;
     }
-    public void   setColor(String c)   {
-        this.color  = c;
+    public void setcolor(String color){
+        this.color = color;
     }
-    public void  setFilled(boolean f) {
-        this.filled = f;
+    public void setFilled (boolean filled){
+        this.filled = filled;
     }
 }
