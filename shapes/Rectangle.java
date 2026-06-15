@@ -1,35 +1,36 @@
-public class Rectangle extends Shape {
-    private double length;
-    private double width;
+package shapes;
 
-    Rectangle(String color, boolean filled, double length, double width){
-        super(color,filled);
-        this.length=length;
-        this.width=width;
+public class Rectangle extends Shape {
+
+    private double width;
+    private double length;
+
+    public Rectangle(String color, boolean filled, double width, double length) {
+        super(color, filled);
+        this.width  = width;
+        this.length = length;
     }
+
     @Override
-    public double getArea(){
-        return length*width;
+    public double getArea() {
+        return width * length;
     }
+
     @Override
-    public double getPerimeter(){
-        return 2*(length+width);
+    public double getPerimeter() {
+        return 2 * (width + length);
     }
+
     @Override
     public String toString() {
+        return "[ Rectangle ]\n" +
+               super.toString()  + "\n" +
+               "Width : " + width  + "\n" +
+               "Length: " + length + "\n" +
+               String.format("Area      : %.2f", getArea())      + "\n" +
+               String.format("Perimeter : %.2f", getPerimeter());
+    }
 
-        String result = "[ Rectangle ]\n";
-        result += super.toString() + "\n";
-        result += "Width : " + width + "\n";
-        result += "Length: " + length + "\n";
-        result += String.format("Area      : %.2f", getArea()) + "\n";
-        result += String.format("Perimeter : %.2f", getPerimeter());
-        return result;
-    }
-    public double getLength(){
-        return length;
-    }
-    public double getWidth(){
-        return width;
-    }
+    public double getWidth()  { return width;  }
+    public double getLength() { return length; }
 }
